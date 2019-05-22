@@ -30,7 +30,7 @@ head(map_table)
 
 Second, we will upload the count data file.
 ```{r}
-pthwy <- read.table(file.path("example-data/pathways-count-data.txt"), sep = "\t", header = TRUE, check.names = FALSE)
+pthwy <- read.table(file.path("example-data/pathyways-count-data.txt"), sep = "\t", header = TRUE, check.names = FALSE)
 View(pthwy)
 ```
 
@@ -43,6 +43,7 @@ merged_obj <- merge(pthwy, map_table)
 head(merged_obj)
 str(merged_obj)
 ```
+
 ```{r}
 merged_obj_oceanregion <- merged_obj %>%
   group_by(OceanRegion) %>%
