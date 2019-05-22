@@ -103,10 +103,10 @@ head(merged_obj_oceanregion_transpose_perc_top_10)
 ```
 
 ```{r}
-merged_obj_oceanregion_transpose_perc_top_10 <- merged_obj_oceanregion_transpose_perc_top_10 %>%
-  rename(
-    "Beaufort Sea" = "BeaufortSea",
-    "Gulf of Mexico" = "GulfofMexico")
+merged_obj_oceanregion_transpose_perc_top_10 <- merged_obj_oceanregion_transpose_perc_top_10 
+  #rename(
+   # "Beaufort Sea" = "BeaufortSea",
+  #  "Gulf of Mexico" = "GulfofMexico")
 merged_obj_oceanregion_transpose_perc_top_10.molten <- melt(merged_obj_oceanregion_transpose_perc_top_10, value.name="Count", variable.name="Variable", na.rm=TRUE)
 
 ```
